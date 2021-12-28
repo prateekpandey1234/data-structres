@@ -38,4 +38,18 @@ public class BinarySearchTree {
             return search(root.left,data);
         }
     }
+    private Boolean isValid(Treenode root,int min,int max){
+        if(root==null){
+            return true;
+        }
+        if(root.data<=min||root.data>=max){
+            return false;
+        }
+        boolean left = isValid(root.left,min,root.data);
+        if(left){
+            boolean right = isValid(root.right, root.data, max);
+            return right;
+        }
+        return false;
+    }
 }
