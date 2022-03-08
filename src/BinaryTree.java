@@ -8,7 +8,7 @@ public class BinaryTree {
         private Treenode right;
         public Treenode(int data){
             this.data=data;
-            this.left= null;
+            this.left =  null;
             this.right = null;
         }
     }

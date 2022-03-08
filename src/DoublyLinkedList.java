@@ -88,7 +88,7 @@ public class DoublyLinkedList {
             point=point.next;
             x++;
         }
-        temp.previous=point.previous;
+        temp.previous =point.previous;
         point.previous.next=temp;
         point.previous=temp;
         temp.next=point;

@@ -11,7 +11,7 @@ public class queue {
         private Listnode next;
         public Listnode(int data){
             this.data=data;
-            this.next=null;
+            this.next =null;
         }
     }
     public static void main(String[] args){
@@ -36,4 +36,5 @@ public class queue {
         length--;
         return temp;
     }
+
 }

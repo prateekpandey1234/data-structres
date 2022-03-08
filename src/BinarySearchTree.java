@@ -1,7 +1,7 @@
 public class BinarySearchTree {
     private Treenode root;
     public static class Treenode{
-        private int data;
+        private final int data;
         private Treenode left;
         private Treenode right;
         public Treenode(int data){
@@ -45,11 +45,25 @@ public class BinarySearchTree {
         if(root.data<=min||root.data>=max){
             return false;
         }
-        boolean left = isValid(root.left,min,root.data);
+        boolean left = isValid(root.left,
+                min,
+                root.data);
         if(left){
-            boolean right = isValid(root.right, root.data, max);
-            return right;
+            return isValid(root.right, root.data, max);
         }
         return false;
+    }
+    //recursive approach for checking if tree is symmetric
+    public boolean isSymmetric( Treenode root){
+        return isSysmmetriccheck(root.right,root.left);
+    }
+    private boolean isSysmmetriccheck(Treenode root1,Treenode root2){
+        if(root1==null && root2==null){
+            return true;
+        }
+        if(root1==null || root2==null){
+            return false;
+        }
+        return root1.data==root2.data && isSysmmetriccheck(root1.left,root2.right) && isSysmmetriccheck(root1.right,root2.left);
     }
 }
