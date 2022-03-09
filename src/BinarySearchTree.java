@@ -66,4 +66,35 @@ public class BinarySearchTree {
         }
         return root1.data==root2.data && isSysmmetriccheck(root1.left,root2.right) && isSysmmetriccheck(root1.right,root2.left);
     }
+    //max depth binary tree
+    public int maxDepth(Treenode root) {
+        int count = 1;
+        return godeep(root,count)-1;
+    }
+    public int godeep(Treenode root,int count){
+        if(root==null){
+            return count;
+        }
+        count+=1;
+        int count1 = 0;
+        count1+=count;
+        return Math.max(godeep(root.left,count),godeep(root.right,count1));
+    }
+    //height balanced tree
+    public Treenode sortedArrayToBST(int[] nums) {
+        if(nums.length==0) return null;
+        return constructTree(nums,0,nums.length-1);
+    }
+
+    public Treenode constructTree(int[]nums,int left,int right){
+        if(left>right)return null;
+        int mid=left+(right-left)/2;
+        Treenode root=new Treenode(nums[mid]);
+        root.left = constructTree(nums,left,mid-1);
+        root.right = constructTree(nums,mid+1,right);
+
+        return root;
+
+
+    }
 }
