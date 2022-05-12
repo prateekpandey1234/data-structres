@@ -1,3 +1,5 @@
+package dataStructure.easy;
+
 public class DoublyLinkedList {
     private Listnode head;
     private Listnode tail;

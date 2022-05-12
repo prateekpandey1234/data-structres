@@ -1,3 +1,5 @@
+package dataStructure.easy;
+
 import java.lang.reflect.Array;
 
 public class array {

@@ -1,3 +1,5 @@
+package dataStructure.easy;
+
 public class stack {
     public Listnode top = null;
     public int length=0;

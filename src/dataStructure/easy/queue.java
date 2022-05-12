@@ -1,3 +1,5 @@
+package dataStructure.easy;
+
 import java.util.NoSuchElementException;
 
 public class queue {

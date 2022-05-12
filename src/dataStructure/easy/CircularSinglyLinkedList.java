@@ -1,3 +1,5 @@
+package dataStructure.easy;
+
 public class CircularSinglyLinkedList {
     private Listnode last;
     public static class Listnode{

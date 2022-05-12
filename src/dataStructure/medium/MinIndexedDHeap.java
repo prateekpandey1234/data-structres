@@ -1,3 +1,5 @@
+package dataStructure.medium;
+
 import java.util.ArrayList;
 import java.util.List;
 import java.util.NoSuchElementException;
@@ -20,16 +22,16 @@ class MinIndexedDHeap<T extends Comparable<T>> {
     private final int[] child, parent;
 
     // The Position Map (pm) maps Key Indexes (ki) to where the position of that
-    // key is represented in the priority queue in the domain [0, sz).
+    // key is represented in the priority dataStructure.easy.queue in the domain [0, sz).
     public final int[] pm;
 
     // The Inverse Map (im) stores the indexes of the keys in the range
-    // [0, sz) which make up the priority queue. It should be noted that
+    // [0, sz) which make up the priority dataStructure.easy.queue. It should be noted that
     // 'im' and 'pm' are inverses of each other, so: pm[im[i]] = im[pm[i]] = i
     public final int[] im;
 
     // The values associated with the keys. It is very important  to note
-    // that this array is indexed by the key indexes (aka 'ki').
+    // that this dataStructure.easy.array is indexed by the key indexes (aka 'ki').
     public final Object[] values;
 
     // Initializes a D-ary heap with a maximum capacity of maxSize.
@@ -199,7 +201,7 @@ class MinIndexedDHeap<T extends Comparable<T>> {
     /* Helper functions to make the code more readable. */
 
     private void isNotEmptyOrThrow() {
-        if (isEmpty()) throw new NoSuchElementException("Priority queue underflow");
+        if (isEmpty()) throw new NoSuchElementException("Priority dataStructure.easy.queue underflow");
     }
 
     private void keyExistsAndValueNotNullOrThrow(int ki, Object value) {

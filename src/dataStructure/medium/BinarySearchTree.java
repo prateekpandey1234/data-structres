@@ -1,3 +1,5 @@
+package dataStructure.medium;
+
 public class BinarySearchTree {
     private Treenode root;
     public static class Treenode{
